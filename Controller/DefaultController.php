@@ -2,12 +2,19 @@
 
 namespace Jan\MOCBundle\Controller;
 
+use Ctors\FilesystemCacheBundle\CacheProvider;
+use Jan\MOCBundle\Entity\MOCPlayerInstance;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class DefaultController extends Controller
 {
-     public function indexAction()
+    public function indexAction(Request $request)
     {
-        return $this->render('JanMOCBundle:Default:index.html.twig', array('name' => md5(rand(0,time()))));
+        return new Response("false");
     }
+
+
 }
